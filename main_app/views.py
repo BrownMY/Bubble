@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Waters
 from django.http import HttpResponse
 
 def index(request):
@@ -11,19 +12,11 @@ def about(request):
     return render(request, 'about.html')
 
 def water_index(request):
+    water = Waters.objects.all()
     return render(request, 'water/index.html', {'water': water})
 
-class Waters:
-    def __init__(self, brand, sizeoz, watertype):
-        self.brand = brand
-        self.sizeoz = sizeoz
-        self.watertype = watertype
-
-water =  [
-    Waters('Essentia', 20, 'Alkaline'),
-    Waters('Absopure', 32, 'Spring'),
-    Waters('Tap', 8, 'Tap')
-]
-
+def water_show(request, water_id):
+    water = Waters.objects.get(id=water_id)
+    return render(request, 'water/show.html', {'water': water})
 
     
