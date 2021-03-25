@@ -21,6 +21,7 @@ urlpatterns = [
     # Add the line below...
     path('', include('main_app.urls')),
     path('bubble/', include('main_app.urls')),
-    path('about/', include('main_app.urls'))
+    path('about/', include('main_app.urls')),
+    path('water/', include('main_app.urls'))
     
 ]

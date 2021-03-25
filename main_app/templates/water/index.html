@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble!</title>
+</head>
+<body>
+    <h2>Here's your water data:</h2>
+    {% for waters in water %}
+    <p>This water is: {{waters.watertype}}</p>
+    <p>I drank: {{waters.sizeoz}}oz of {{waters.brand}} water.</p>
+    <hr />
+    {%endfor%}
+</body>
+</html>
