@@ -9,7 +9,7 @@
 <body>
     <h2>Here's your water data:</h2>
     {% for waters in water %}
-    <p>This water is: {{waters.watertype}}</p>
+    <p>This water is: <a href="/water/{{water.id}}">{{waters.watertype}}</a></p>
     <p>I drank: {{waters.sizeoz}}oz of {{waters.brand}} water.</p>
     <hr />
     {%endfor%}
